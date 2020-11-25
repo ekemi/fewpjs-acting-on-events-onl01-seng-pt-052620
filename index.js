@@ -12,3 +12,16 @@ dodger.addEventListener("keydown",function(e){
     moveDodgerLeft();
   }
 });
+
+function moveDodgerLeft() {
+  let leftNumbers = dodger.style.left.replace("px","");
+  let left = parseInt(leftNumbers, 10);
+  if (left > 10) {
+    dodger.style.right = `${left+1}px`;
+  }
+}
+dodger.addEventListener("keydown",function(e){
+  if (e.key =="ArrowRight"){
+    moveDodgerRight();
+  }
+});
